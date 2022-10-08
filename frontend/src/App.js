@@ -5,10 +5,10 @@ import {Home} from './pages/Home'
 function App() {
 
   return (
-    <div>
+    <div className="container">
       <Router>
         <Switch>
-          <Route path="/" component={Home}/>
+          <Route exact path="/" component={Home}/>
         </Switch>
       </Router>
     </div>
