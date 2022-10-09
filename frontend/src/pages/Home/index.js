@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'; 
 
 export const Home = () => {
 
@@ -35,7 +36,7 @@ export const Home = () => {
               <td>{produto.id}</td>
               <td>{produto.titulo}</td>
               <td>{produto.descricao}</td>
-              <td>Vizualizar|Editar|Deletar</td>
+              <td><Link>Vizualizar</Link>|<Link>Edita</Link>|<Link>Deletar</Link></td>
             </tr>
           ))}
         </tbody>
