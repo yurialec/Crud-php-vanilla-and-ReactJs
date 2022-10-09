@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -7,19 +7,19 @@ export const Home = () => {
 
   const getProdutos = async () => {
     fetch("http://localhost:8080/index.php")
-    .then((response) => response.json())
-    .then((responseJson) =>(
-      // console.log(responseJson)
-      setData(responseJson.records)
-    ));
+      .then((response) => response.json())
+      .then((responseJson) => (
+        // console.log(responseJson)
+        setData(responseJson.records)
+      ));
   }
 
   useEffect(() => {
     getProdutos();
-  },[])
+  }, [])
 
   return (
-    <div>
+    <div className="container">
       <h1>Listar</h1>
       <table border="1">
         <thead>
@@ -31,7 +31,7 @@ export const Home = () => {
           </tr>
         </thead>
         <tbody>
-          {Object.values(data).map(produto =>(
+          {Object.values(data).map(produto => (
             <tr>
               <td>{produto.id}</td>
               <td>{produto.titulo}</td>
@@ -41,6 +41,10 @@ export const Home = () => {
           ))}
         </tbody>
       </table>
+      <br></br>
+      <Link to="/cadastrar">
+        <button className='btn btn-primary'>Cadastrar</button>
+      </Link>
     </div>
   );
 }
