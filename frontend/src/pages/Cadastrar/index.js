@@ -57,11 +57,11 @@ export const Cadastrar = () => {
             <form onSubmit={cadastrarProduto}>
                 <div class="form-group">
                     <label>Título</label>
-                    <input type="titulo" class="form-control" id="titulo" name="titulo" placeholder="Título do produto" onChange={valorInput} />
+                    <input type="titulo" class="form-control" required id="titulo" name="titulo" placeholder="Título do produto" onChange={valorInput} />
                 </div>
                 <div class="form-group">
                     <label>Descrição</label>
-                    <input type="descricao" class="form-control" id="descricao" name="descricao" placeholder="Descrição do produto" onChange={valorInput} />
+                    <input type="descricao" class="form-control" required id="descricao" name="descricao" placeholder="Descrição do produto" onChange={valorInput} />
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
                 <br />
