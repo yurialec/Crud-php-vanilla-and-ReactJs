@@ -36,7 +36,17 @@ export const Home = () => {
               <td>{produto.id}</td>
               <td>{produto.titulo}</td>
               <td>{produto.descricao}</td>
-              <td><Link>Vizualizar</Link>|<Link>Edita</Link>|<Link>Deletar</Link></td>
+              <td>
+                <button className='btn btn-primary'>
+                  <Link style={{color: 'white'}} to={"/visualizar/" + produto.id}>Vizualizar</Link>
+                </button>
+                <button className='btn btn-warning'>
+                  <Link style={{color: 'white'}}>Editar</Link>
+                </button>
+                <button className='btn btn-danger'>
+                  <Link style={{color: 'white'}}>Deletar</Link>
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
