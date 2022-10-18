@@ -26,13 +26,13 @@ export const Visualizar = (props) => {
             <br></br>
             <div>
                 <div>
-                    <label>#{data.id}</label>
+                    <label><strong>#</strong> {data.id}</label>
                 </div>
                 <div>
-                    <label>Título: {data.titulo}</label>
+                    <label><strong>Título:</strong> {data.titulo}</label>
                 </div>
                 <div>
-                    <label>Descrição: {data.descricao}</label>
+                    <label><strong>Descrição:</strong> {data.descricao}</label>
                 </div>
             </div>
             <div>

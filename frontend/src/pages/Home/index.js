@@ -41,7 +41,7 @@ export const Home = () => {
                   <Link style={{color: 'white'}} to={"/visualizar/" + produto.id}>Vizualizar</Link>
                 </button>
                 <button className='btn btn-warning'>
-                  <Link style={{color: 'white'}}>Editar</Link>
+                  <Link style={{color: 'white'}} to={"/editar/" + produto.id}>Editar</Link>
                 </button>
                 <button className='btn btn-danger'>
                   <Link style={{color: 'white'}}>Deletar</Link>

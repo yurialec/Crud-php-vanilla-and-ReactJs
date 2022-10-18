@@ -52,8 +52,6 @@ export const Cadastrar = () => {
     return (
         <div className="container">
             <h1>Cadastrar</h1>
-            {status.type === 'erro' ? <div className="alert alert-danger">{status.mensagem}</div> : ""}
-            {status.tydive === 'success' ? <div className="alert alert-success">{status.mensagem}</div> : ""}
             <form onSubmit={cadastrarProduto}>
                 <div class="form-group">
                     <label>Título</label>
