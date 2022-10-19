@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export const Editar = (props) => {
 
     const [id] = useState(props.match.params.id)
     const [titulo, setTitulo] = useState('');
     const [descricao, setDescricao] = useState('');
+    let history = useHistory();
     
     const editProduto = async e =>{
         e.preventDefault();
@@ -19,6 +20,7 @@ export const Editar = (props) => {
         }).then((response) => response.json())
         .then((responseJson) =>{
             console.log(responseJson);
+            history.push("/");
         })
     }
 
